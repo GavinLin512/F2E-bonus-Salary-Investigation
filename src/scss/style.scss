@@ -1,0 +1,22 @@
+$bg: wheat;
+$text: aqua;
+body {
+    background-color: $bg;
+}
+
+.container {
+    padding: 1.5rem;
+    display: flex;
+    background: linear-gradient(to top, black, white);
+    div {
+        width: 100%;
+        height: 50px;
+        background-color: blue;
+        p {
+            font-size: 30px;
+            color: $text;
+            margin: 0;
+            line-height: 50px;
+        }
+    }
+}
