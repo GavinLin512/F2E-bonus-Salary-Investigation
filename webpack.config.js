@@ -2,8 +2,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // 生成 html plugin
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 生成 css plugin
 const path = require('path');
 
+let mode = "development";
+
+if (process.env.NODE_ENV === "production") {
+    mode = "production";
+}
+
 module.exports = {
-    mode: 'development', // 另一個 mode: 'production' 是生產環境
+    mode: mode, // 另一個 mode: 'production' 是生產環境
     entry: {
         index: './src/index.js' // 可以指定任意 chunk 名稱
     },
