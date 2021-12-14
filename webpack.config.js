@@ -32,7 +32,7 @@ module.exports = {
                     // 将 Sass 编译成 CSS
                     'sass-loader',
                     // postcss，直接編譯支援不同瀏覽器的 css，透過 package.json 內設定 browserslist，以及 postcss.config.js 內的 postcss-preset-env 
-                    'postcss-loader'
+                    'postcss-loader',
                 ],
             },
             {

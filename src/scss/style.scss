@@ -1,23 +1,13 @@
-$bg: wheat;
-$text: aqua;
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+
 body {
-    background-color: $bg;
+    background-color: $bg !important;
 }
 
 .container {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to top, black, white);
-    div {
-        width: 100%;
-        height: 50px;
-        background-color: whitesmoke;
-        p {
-            font-size: 30px;
-            color: $text;
-            margin: 0;
-            line-height: 50px;
-        }
-    }
+    background: linear-gradient(to top, yellow, green);
+    height: 100vh;
+    // background-image: url('../images/test.png');
 }
