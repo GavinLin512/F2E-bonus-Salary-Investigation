@@ -22,6 +22,14 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|gif)$/i, // 透過 asset module，可以 bundle img
+                type: 'asset/resource'
+            },
+            {
+                test: /\.html$/i, // 讓 html 支援 bundle src 檔案
+                loader: "html-loader",
+            },
+            {
                 test: /\.(s[ac]|c)ss$/i, // sass、scss、css 都通用的正規表達式，bundle scss
                 use: [
                     // 将 JS 字符串生成为 style 节点
@@ -29,19 +37,13 @@ module.exports = {
                     MiniCssExtractPlugin.loader, // 取代 style-loader，production 用
                     // 将 CSS 转化成 CommonJS 模块
                     'css-loader',
-                    // 将 Sass 编译成 CSS
-                    'sass-loader',
                     // postcss，直接編譯支援不同瀏覽器的 css，透過 package.json 內設定 browserslist，以及 postcss.config.js 內的 postcss-preset-env 
                     'postcss-loader',
+                    // 解決 url(...) 的問題，必須放在 sass loader 之前
+                    'resolve-url-loader',
+                    // 将 Sass 编译成 CSS
+                    'sass-loader',
                 ],
-            },
-            {
-                test: /\.(png|jpe?g|gif)$/i, // 透過 asset module，可以 bundle img
-                type: 'asset/resource'
-            },
-            {
-                test: /\.html$/i, // 讓 html 支援 bundle src 檔案
-                loader: "html-loader",
             },
         ],
     },

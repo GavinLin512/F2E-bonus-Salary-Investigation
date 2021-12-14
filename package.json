@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack serve --open "
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,11 @@
     "html-webpack-plugin": "^5.5.0",
     "loadsh": "0.0.4",
     "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^7.0.0",
     "postcss": "^8.4.4",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.0.1",
+    "resolve-url-loader": "^4.0.0",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

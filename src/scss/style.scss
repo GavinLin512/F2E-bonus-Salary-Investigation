@@ -6,8 +6,11 @@ body {
     background-color: $bg !important;
 }
 
+// 此為註解
 .container {
     background: linear-gradient(to top, yellow, green);
     height: 100vh;
+    font-size: 30px;
+    color: brown; // test 
     // background-image: url('../images/test.png');
 }
