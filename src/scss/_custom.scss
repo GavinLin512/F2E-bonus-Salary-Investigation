@@ -1,1 +1,59 @@
-$bg: wheat;
+$logo-font-size: 30px;
+$side-nav-font-size: 24px;
+
+$color-bg: #8092BB;
+$color-sub-nav: #E7EFF9;
+$color-nav: #263A65;
+$color-text: #BDCFEE;
+
+
+body {
+    background-color: $color-bg !important;
+}
+
+// 此為註解
+.side-nav {
+    background-color: $color-nav;
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    // test
+    // background-image: url('../images/test.png');
+    .logo {
+        font-size: $logo-font-size;
+        color: $color-text;
+    }
+    ul {
+        width: 330px;
+        li {
+            width: 100%;
+            height: 50px;
+            background-color: $color-sub-nav;
+            list-style-type: none;
+            font-size: $side-nav-font-size;
+            cursor: pointer;
+            span {
+                color: $color-nav;
+            }
+        }
+        .side-sub-nav {
+            a {
+                background-color: $color-bg;
+                color: $color-sub-nav;
+                text-decoration: none;
+            }
+            .side-sub-nav-btn {
+                height: 40px;
+            }
+        }
+    }
+}
+
+main {
+    width: calc(100% - 350px);
+    height: 100vh;
+    background-color: $color-bg;
+    .canvas-container {
+        height: 50vw;
+    }
+}
