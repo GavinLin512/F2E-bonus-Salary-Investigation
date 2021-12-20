@@ -1,2 +1,2 @@
-@import "custom";
-@import "~bootstrap/scss/bootstrap";
+@import 'pages/index'; // 用 use 也行，但沒有變數問題，所以用 import
+@import '~bootstrap/scss/bootstrap';

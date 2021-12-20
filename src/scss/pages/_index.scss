@@ -1,45 +1,38 @@
-$logo-font-size: 30px;
-$side-nav-font-size: 24px;
-
-$color-bg: #8092BB;
-$color-sub-nav: #E7EFF9;
-$color-nav: #263A65;
-$color-text: #BDCFEE;
-
+@use '../variables/variable'; // 變數要加 attribute，避免混淆; 不可當全域使用
 
 body {
-    background-color: $color-bg !important;
+    background-color: variable.$color-bg !important;
 }
 
-// 此為註解
+// 此為測試註解
 .side-nav {
-    background-color: $color-nav;
+    background-color: variable.$color-nav;
     position: fixed;
     width: 350px;
     height: 100vh;
     // test
     // background-image: url('../images/test.png');
     .logo {
-        font-size: $logo-font-size;
-        color: $color-text;
+        font-size: variable.$logo-font-size;
+        color: variable.$color-text;
     }
     ul {
         width: 330px;
         li {
             width: 100%;
             height: 50px;
-            background-color: $color-sub-nav;
+            background-color: variable.$color-sub-nav;
             list-style-type: none;
-            font-size: $side-nav-font-size;
+            font-size: variable.$side-nav-font-size;
             cursor: pointer;
             span {
-                color: $color-nav;
+                color: variable.$color-nav;
             }
         }
         .side-sub-nav {
             a {
-                background-color: $color-bg;
-                color: $color-sub-nav;
+                background-color: variable.$color-bg;
+                color: variable.$color-sub-nav;
                 text-decoration: none;
             }
             .side-sub-nav-btn {
@@ -52,7 +45,7 @@ body {
 main {
     width: calc(100% - 350px);
     height: 100vh;
-    background-color: $color-bg;
+    background-color: variable.$color-bg;
     .canvas-container {
         height: 50vw;
     }
